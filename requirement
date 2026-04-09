@@ -1,0 +1,51 @@
+complete DevOps demo project
+
+Goal:
+Deploy a simple Spring Boot Java app to AWS EKS using Jenkins CI/CD.
+
+Constraints:
+- DO NOT install anything on local machine
+- Everything must run on a single EC2 instance (Jenkins, Maven, Docker)
+- Kubernetes cluster must be AWS EKS
+
+Requirements:
+1. Spring Boot app (simple REST API)
+2. Dockerfile for app
+3. Jenkins setup on EC2
+4. Jenkins pipeline (Declarative):
+   - Pull code from Git
+   - Build using Maven
+   - Build Docker image
+   - Push to ECR
+   - Deploy to EKS using kubectl
+5. Kubernetes manifests:
+   - Deployment
+   - Service (LoadBalancer)
+6. One single shell script to install on EC2:
+   - Java
+   - Jenkins
+   - Maven
+   - Docker
+   - AWS CLI
+   - kubectl
+   - eksctl
+7. IAM roles and permissions needed
+8. ECR repo creation steps
+
+Output format:
+- Project folder structure
+- All code files
+- Jenkinsfile
+- install.sh script
+- Kubernetes YAMLs
+
+Also include:
+A detailed step-by-step instructor guide explaining:
+- EC2 setup
+- Running install script
+- Creating EKS cluster
+- Connecting Jenkins to EKS
+- Running pipeline
+- Verifying deployment
+
+Keep it simple, beginner-friendly, and production-realistic.

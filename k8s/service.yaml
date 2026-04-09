@@ -1,0 +1,21 @@
+# ============================================================
+# Kubernetes Service Manifest — DevOps Demo App
+# ============================================================
+# LoadBalancer type creates an AWS ELB (Elastic Load Balancer)
+# that provides a public URL to access the application.
+# ============================================================
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: devops-demo-service
+  labels:
+    app: devops-demo
+spec:
+  type: LoadBalancer
+  selector:
+    app: devops-demo
+  ports:
+    - protocol: TCP
+      port: 80            # External port (what users hit)
+      targetPort: 8080     # Container port (where app listens)
