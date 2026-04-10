@@ -16,7 +16,7 @@ pipeline {
         AWS_ACCOUNT_ID  = '074556881919'
         AWS_REGION      = 'ap-southeast-2'
         ECR_REPO_NAME   = 'devops-demo'
-        EKS_CLUSTER     = 'k8s-demo'
+        EKS_CLUSTER     = 'devops-demo-cluster'
         ECR_REGISTRY    = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com"
         IMAGE_TAG       = "${BUILD_NUMBER}"
         FULL_IMAGE      = "${ECR_REGISTRY}/${ECR_REPO_NAME}:${IMAGE_TAG}"
